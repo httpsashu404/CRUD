@@ -1,0 +1,56 @@
+h1{
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-shadow: 1px 1px 0px black;
+    background-color: rgba(0,0,0,.6);
+}
+table{
+    width: 90%;
+    background-color: antiquewhite;
+}
+th{
+    padding: 5px;
+    color: white;
+    text-shadow: 1px 1px 0px black;
+    background-color: rgba(0,0,0,.5);
+}
+td{
+    padding: 3px;
+    text-align: center;
+}
+button{
+    margin: 2px;
+    letter-spacing: .3px;
+    padding: 3px 5px;
+    border-radius: 5px;
+}
+button:hover{
+    transition: .5s;
+    background-color: silver;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+/* new.ejs */
+fieldset{
+    width: 300px;
+    padding: 10px;
+    display: flex;
+    border-radius: 10px;
+    background-color: antiquewhite;
+    justify-content: center;
+}
+input{
+    float:right;
+}
+.show{
+    width:fit-content;
+    margin: 2px;
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 5px;
+    border: 1px dotted black;
+    background-color: blanchedalmond;
+}

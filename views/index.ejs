@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Records</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<style>
+    .add{
+        float: left;
+        margin-left: 5%;
+    }
+</style>
+<body>
+    <h1>All Records</h1>
+    <center>
+        <button class="add"><a href="http://localhost:5000/emp/new"><b>+ Employee</b></a></button><br>
+        <table border="1">
+            <thead>
+                <th>Name</th>
+                <th>Contact</th>
+                <th>Address</th>
+                <th>Department</th>
+                <th>Salary</th>
+                <th>Action</th>
+            </thead>
+            <tbody>
+                <% for(empl of emp){ %>
+                <tr>
+                    <td><%= empl.name %></td>
+                    <td><%= empl.tel %></td>
+                    <td><%= empl.add %></td>
+                    <td><%= empl.deprt %></td>
+                    <td><%= empl.salary %></td>
+                    <td>
+                        <center>
+                            <button><a href="http://localhost:5000/emp/<%= empl.id %>">View</a></button>
+                            <button><a href="http://localhost:5000/emp/<%= empl.id %>/edit">Edit</a></button>
+                            <!-- delete employee method-I -->
+                                <!-- <form action="http://localhost:5000/emp/?_method=DELETE" method="post">
+                                    <button>Delete</button>                                
+                                </form> -->
+                            <!-- method-II -->                                                         
+                            <button><a href="http://localhost:5000/emp/<%= empl.id %>/delete">Delete</a></button>
+                        </center>
+                    </td>
+                </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </center>
+</body>
+</html>
