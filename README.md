@@ -5,7 +5,7 @@ step-1  Open project folder in vs code </br>
 step-2  Run command 'npm i' internet must connected </br>
 step-3  Run command 'npm run dev' </br>
 step-4  Open brower type in url 'localhost:5000/emp' press enter </br>
-step-4  Enjoy project </br>
+step-5  Enjoy project </br>
 **Note :** Must be intalled NodeJs Software in your system </br>
 
 **Image : 1**</br></br>
