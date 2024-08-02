@@ -30,7 +30,7 @@ let emp = [
         tel: 7763992074,
         add: "Sasaram",
         deprt: "Web developer",
-        salary: 45000
+        salary: 42000
     },
     {
         id: uuidv4(),
@@ -39,6 +39,22 @@ let emp = [
         add: "Gopalpur",
         deprt: "S/F Engineer",
         salary: 56000
+    },
+    {
+        id: uuidv4(),
+        name: "Rishav Singh",
+        tel: 8271973256,
+        add: "Patna",
+        deprt: "Assi. Professor",
+        salary: 45000
+    },
+    {
+        id: uuidv4(),
+        name: "Aditya Singh",
+        tel: 8084018281,
+        add: "Delhi",
+        deprt: "HR Manager",
+        salary: 35000
     }
 ]
 
@@ -57,7 +73,7 @@ app.post('/emp', (req, res) => {
     let { name, tel, add, deprt, salary } = req.body
     let id = uuidv4()
     emp.push({ id, name, tel, add, deprt, salary })
-    res.redirect('http://localhost:5000/emp')
+    res.redirect('/emp')
 })
 
 // show single data APIs
@@ -87,7 +103,7 @@ app.put('/emp/:id', (req, res) => {
     gemp.add = nadd
     gemp.deprt = ndeprt
     gemp.salary = nsalary
-    res.redirect('http://localhost:5000/emp/')
+    res.redirect('/emp/')
 })
 
 // delete epmloyee APIs 
@@ -103,7 +119,7 @@ app.get('/emp/:id/delete', (req, res) => {
     let { id } = req.params
     let gemp = emp.find((p) => id === p.id)
     emp = emp.filter((p) => id !== p.id)
-    res.redirect('http://localhost:5000/emp/')
+    res.redirect('/emp/')
 })
 
 app.listen(PORT, () => {

@@ -9,16 +9,16 @@
 <body>    
     <fieldset>
         <legend><b>(Employee)</b></legend>
-        <form action="http://localhost:5000/emp/<%= gemp.id %>?_method=PUT" method="post" autocomplete="off">
+        <form action="/emp/<%= gemp.id %>?_method=PUT" method="post" autocomplete="off">
             <h3 style="text-align: center;">Employee</h3><br>
-            <b>Name : <%= gemp.name %><br><br>
+            <b>Name : <input type="text" name="name" id="" placeholder="Your name" value="<%= gemp.name %>" readonly required><br><br>
             <b>Contact : </b><input type="tel" maxlength="10" name="tel" id="" placeholder="" value="<%= gemp.tel %>" required><br><br>
             <b>Address : </b><input type="text" name="add" id="" placeholder="" value="<%= gemp.add %>" required><br><br>
             <b>Department : </b><input type="text" name="deprt" id="" placeholder="" value="<%= gemp.deprt %>" required><br><br>
             <b>Salary : </b><input type="number" name="salary" id="" placeholder="" value="<%= gemp.salary %>" required><br><br>
             <center>
                 <button type="submit">Update</button>
-                <button><a href="http://localhost:5000/emp/">Go Back</a></button>
+                <button><a href="/emp/">Go Back</a></button>
             </center>
         </form>
     </fieldset>    
